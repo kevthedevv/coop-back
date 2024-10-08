@@ -19,8 +19,8 @@ const uploadTemplate = (req, res) => {
     if (!req.file) {
         return res.status(400).json({ error: 'No file uploaded' });
     }
+    console.log('Uploaded file:', req.file); // Log the file details
 
-    // You can add logic here to process the uploaded file if needed
     res.status(200).json({ message: 'File uploaded successfully', file: req.file });
 };
 
