@@ -7,7 +7,7 @@ const storage = multer.diskStorage({
         cb(null, 'uploads/'); // Specify the uploads folder
     },
     filename: (req, file, cb) => {
-        cb(null, `${Date.now()}-${file.originalname}`); // Append timestamp to the file name
+        cb(null, 'template.xlsx');
     },
 });
 
